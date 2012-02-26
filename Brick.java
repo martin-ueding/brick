@@ -35,29 +35,29 @@ public class Brick {
 
 		for (int i = 0; i < paramInt1; i++)
 			for (int j = 0; j < paramInt2; j++) {
-				steine[i][j] = (Math.random() < 0.5D ? 1 : 2);
+				steine[i][j] = (byte)(Math.random() < 0.5 ? 1 : 2);
 			}
 	}
 
 	static void initRest() {
-		oot = Math.random() < 0.5D;
+		oot = Math.random() < 0.5;
 
 		if (oot) {
-			p1 = new Point((int)(feldBreite * 0.6D), feldHoehe - 60);
-			p2 = new Point((int)(feldBreite * 0.3D), feldHoehe - 15);
+			p1 = new Point((int)(feldBreite * 0.6), feldHoehe - 60);
+			p2 = new Point((int)(feldBreite * 0.3), feldHoehe - 15);
 		}
 		else {
-			p1 = new Point((int)(feldBreite * 0.6D), feldHoehe - 15);
-			p2 = new Point((int)(feldBreite * 0.3D), feldHoehe - 60);
+			p1 = new Point((int)(feldBreite * 0.6), feldHoehe - 15);
+			p2 = new Point((int)(feldBreite * 0.3), feldHoehe - 60);
 		}
 
 		p2p = Brick.p1p = 0L;
 
-		ball = new Point((int)(feldBreite * 0.5D), feldHoehe - 20);
-		alpha = 4.39822971502571D;
-		ballV = 5.0D;
+		ball = new Point((int)(feldBreite * 0.5), feldHoehe - 20);
+		alpha = 4.39822971502571;
+		ballV = 5.0;
 
-		oot = Math.random() < 0.5D;
+		oot = Math.random() < 0.5;
 	}
 
 	static void initSpiel() {
@@ -109,7 +109,7 @@ public class Brick {
 		Dimension localDimension = Toolkit.getDefaultToolkit().getScreenSize();
 
 		feldBreite = localDimension.width;
-		feldHoehe = (int)(localDimension.height * 0.8D);
+		feldHoehe = (int)(localDimension.height * 0.8);
 
 		if ((paramArrayOfString.length == 1) && (paramArrayOfString[0].equals("-fs"))) {
 			feldHoehe = localDimension.height;
