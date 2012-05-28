@@ -1,6 +1,5 @@
 import java.awt.Point;
 import java.util.TimerTask;
-import javax.swing.JFrame;
 
 public class MyTimerTask extends TimerTask {
 	private int iter = 1;
